@@ -20,31 +20,16 @@ public class HeightsGenerator {
 	public float generateHeight(int x, int z, Terrain terrain)
 	{
 		
-		if(x <= 2.5f || x >= 253.5f)
-			{
-				float f1 = getInterpolatedNoise(0 / 32f, z / 32f) * (AMPLITUDE);
-				f1 += getInterpolatedNoise(0 / 8f, z / 8f) * (AMPLITUDE /3);
-				float f2 = getInterpolatedNoise(256 / 32f, z / 32f) * (AMPLITUDE);
-				f2 += getInterpolatedNoise(256 / 8f, z / 8f) * (AMPLITUDE /3);
-				
-				float result = (f1 + f2)/2;
-
-				return 10;
-			}
-		
-		if(z <= 2.5f)
-		{
 			
-		}
-		
-		if(z >= 253.5f)
-		{
 			
-		}
-			float total =  getInterpolatedNoise(x / 32f, z / 32f) * (AMPLITUDE);
+			if(x < 10) {
+				return 0;
+			}else{
+				float total =  getInterpolatedNoise(x / 32f, z / 32f) * (AMPLITUDE);
+			
 			total += getInterpolatedNoise(x / 8f, z / 8f) * (AMPLITUDE /3);
 			//System.out.println(total);
-			return total;
+			return total;}
 	}
 	
 	
