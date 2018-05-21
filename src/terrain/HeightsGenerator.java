@@ -17,7 +17,7 @@ public class HeightsGenerator {
 	 * uses method below to create random smoothed heights for each vertex
 	 */
 	
-	public float generateHeight(int x, int z)
+	public float generateHeight(int x, int z, Terrain terrain)
 	{
 		
 		if(x <= 2.5f || x >= 253.5f)
@@ -29,12 +29,7 @@ public class HeightsGenerator {
 				
 				float result = (f1 + f2)/2;
 
-				if(x <= 2.5f || x >= 253.5f)
-				{
-					return result;
-
-				}
-
+				return 10;
 			}
 		
 		if(z <= 2.5f)
